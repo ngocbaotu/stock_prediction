@@ -1,0 +1,106 @@
+# ========================
+# Python / FastAPI Backend
+# ========================
+
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Distribution / packaging
+*.egg-info/
+.eggs/
+
+# Logs and databases
+*.log
+*.sqlite3
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+.conda/
+.env
+.env.*
+*.env
+
+# Jupyter
+.ipynb*
+
+# Deep Learning / ML artifacts
+checkpoints/
+runs/
+logs/
+wandb/
+*.pth
+*.ckpt
+*.onnx
+*.h5
+*.pkl
+*.joblib
+*.npz
+*.npy
+
+# Large data
+data/
+
+# ========================
+# Next.js Frontend
+# ========================
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+.pnpm-store/
+
+# Next.js build output
+.next/
+out/
+dist/
+.next/cache/
+*.log
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Editor / OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# TypeScript
+*.tsbuildinfo
+
+# Tailwind / PostCSS cache
+.postcssrc
+tailwind.config.js.backup
+
+# Turbopack cache (optional but recommended)
+.turbo/
+
+# Misc
+coverage/
+
+# ========================
+# OS / Editor / Misc
+# ========================
+.idea/
+.vscode/
+*.swp
+*.swo
+*.tmp
+.DS_Store
+Thumbs.db
