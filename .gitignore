@@ -47,6 +47,7 @@ wandb/
 # Large data
 data/*
 !data/processed/
+!data/features/
 
 # ========================
 # Next.js Frontend
