@@ -45,7 +45,8 @@ wandb/
 *.npy
 
 # Large data
-data/
+data/*
+!data/processed/
 
 # ========================
 # Next.js Frontend
