@@ -26,6 +26,7 @@ ENV/
 .env
 .env.*
 *.env
+my_virtual_env/
 
 # Jupyter
 .ipynb*
