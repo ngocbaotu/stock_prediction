@@ -49,6 +49,7 @@ wandb/
 data/*
 !data/processed/
 !data/features/
+!data/selected/
 
 # ========================
 # Next.js Frontend
