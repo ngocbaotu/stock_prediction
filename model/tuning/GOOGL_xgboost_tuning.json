@@ -1,7 +1,6 @@
 {
   "model": "xgboost",
   "ticker": "GOOGL",
-  "timestamp": "20251124_235356",
   "best_cv_rmse": 0.01873625287872982,
   "best_params": {
     "n_estimators": 1000,
@@ -23,7 +22,7 @@
     0.017654094889028353
   ],
   "n_combinations_tested": 30,
-  "predictions_csv": "../model/tuning/GOOGL_xgboost_best_predictions_20251124_235356.csv",
+  "predictions_csv": "../model/tuning/GOOGL_xgboost_best_predictions.csv",
   "combined_preview_head": {
     "columns": [
       "date",

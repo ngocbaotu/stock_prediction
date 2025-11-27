@@ -1,6 +1,6 @@
+
 {
   "ticker": "AAPL",
-  "timestamp": "20251124_231802",
   "models": [
     {
       "model": "xgboost",
@@ -17,12 +17,12 @@
         "reg_lambda": 0.5,
         "early_stopping_rounds": 50
       },
-      "json_path": "../model/tuning/AAPL_xgboost_tuning_20251124_231802.json",
-      "csv_path": "../model/tuning/AAPL_xgboost_best_predictions_20251124_231802.csv"
+      "json_path": "../model/tuning/AAPL_xgboost_tuning.json",
+      "csv_path": "../model/tuning/AAPL_xgboost_best_predictions.csv"
     },
     {
       "model": "lstm",
-      "best_cv_rmse": 0.016733591922502386,
+      "best_cv_rmse": 0.016953891203892638,
       "best_params": {
         "seq_len": 5,
         "hidden_dimension": 64,
@@ -34,8 +34,8 @@
         "num_epochs": 50,
         "batch_size": 32
       },
-      "json_path": "../model/tuning/AAPL_lstm_tuning_20251124_231802.json",
-      "csv_path": "../model/tuning/AAPL_lstm_best_predictions_20251124_231802.csv"
+      "json_path": "../model/tuning/AAPL_lstm_tuning.json",
+      "csv_path": "../model/tuning/AAPL_lstm_best_predictions.csv"
     }
   ]
 }
