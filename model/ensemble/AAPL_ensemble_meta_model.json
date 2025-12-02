@@ -1,0 +1,21 @@
+{
+  "ticker": "AAPL",
+  "meta_model": "linear",
+  "base_models": [
+    "xgboost",
+    "lstm"
+  ],
+  "cv_rmse": 0.020879527558458653,
+  "cv_rmse_std": 0.006827493340593741,
+  "rmse_per_fold": [
+    0.0176428001841446,
+    0.030376006178900954,
+    0.014619776312330416
+  ],
+  "coefficients": {
+    "xgboost": 1.3468873655689324,
+    "lstm": 2.042836157888643
+  },
+  "intercept": -0.0030931116320965135,
+  "model_type": "LinearRegression"
+}

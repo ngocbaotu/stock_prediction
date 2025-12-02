@@ -1,7 +1,6 @@
 {
   "model": "xgboost",
   "ticker": "AAPL",
-  "timestamp": "20251124_231802",
   "best_cv_rmse": 0.016797853285743382,
   "best_params": {
     "n_estimators": 1000,
@@ -23,7 +22,7 @@
     0.015256933874964613
   ],
   "n_combinations_tested": 30,
-  "predictions_csv": "../model/tuning/AAPL_xgboost_best_predictions_20251124_231802.csv",
+  "predictions_csv": "../model/tuning/AAPL_xgboost_best_predictions.csv",
   "combined_preview_head": {
     "columns": [
       "date",
