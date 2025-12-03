@@ -1,38 +1,36 @@
-
 {
   "ticker": "AAPL",
   "models": [
     {
       "model": "xgboost",
-      "best_cv_rmse": 0.016797853285743382,
+      "best_cv_rmse": 0.016867285135427536,
       "best_params": {
-        "n_estimators": 1000,
-        "max_depth": 4,
-        "learning_rate": 0.01,
+        "n_estimators": 300,
+        "max_depth": 6,
+        "learning_rate": 0.05,
         "subsample": 0.7,
-        "colsample_bytree": 0.7,
-        "min_child_weight": 1,
-        "gamma": 0,
-        "reg_alpha": 0.1,
-        "reg_lambda": 0.5,
-        "early_stopping_rounds": 50
+        "colsample_bytree": 0.9,
+        "min_child_weight": 5,
+        "gamma": 0.2,
+        "reg_alpha": 0.3,
+        "reg_lambda": 3
       },
       "json_path": "../model/tuning/AAPL_xgboost_tuning.json",
       "csv_path": "../model/tuning/AAPL_xgboost_best_predictions.csv"
     },
     {
       "model": "lstm",
-      "best_cv_rmse": 0.016953891203892638,
+      "best_cv_rmse": 0.016965020447969437,
       "best_params": {
         "seq_len": 5,
         "hidden_dimension": 64,
         "layer_dimension": 2,
-        "fc1_dimension": 128,
-        "fc2_dimension": 64,
-        "dropout": 0.2,
-        "lr": 0.01,
-        "num_epochs": 50,
-        "batch_size": 32
+        "fc1_dimension": 64,
+        "fc2_dimension": 32,
+        "dropout": 0.1,
+        "lr": 0.0005,
+        "num_epochs": 20,
+        "batch_size": 64
       },
       "json_path": "../model/tuning/AAPL_lstm_tuning.json",
       "csv_path": "../model/tuning/AAPL_lstm_best_predictions.csv"

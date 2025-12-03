@@ -1,0 +1,39 @@
+{
+  "ticker": "AMZN",
+  "models": [
+    {
+      "model": "xgboost",
+      "best_cv_rmse": 0.01912216962049848,
+      "best_params": {
+        "n_estimators": 1000,
+        "max_depth": 8,
+        "learning_rate": 0.1,
+        "subsample": 0.7,
+        "colsample_bytree": 0.8,
+        "min_child_weight": 5,
+        "gamma": 0.1,
+        "reg_alpha": 0.3,
+        "reg_lambda": 3
+      },
+      "json_path": "../model/tuning/AMZN_xgboost_tuning.json",
+      "csv_path": "../model/tuning/AMZN_xgboost_best_predictions.csv"
+    },
+    {
+      "model": "lstm",
+      "best_cv_rmse": 0.01927797682583332,
+      "best_params": {
+        "seq_len": 5,
+        "hidden_dimension": 64,
+        "layer_dimension": 2,
+        "fc1_dimension": 64,
+        "fc2_dimension": 16,
+        "dropout": 0.2,
+        "lr": 0.0005,
+        "num_epochs": 20,
+        "batch_size": 64
+      },
+      "json_path": "../model/tuning/AMZN_lstm_tuning.json",
+      "csv_path": "../model/tuning/AMZN_lstm_best_predictions.csv"
+    }
+  ]
+}
