@@ -1,0 +1,22 @@
+{
+  "ticker": "GOOGL",
+  "meta_model": "ridge_alpha_1e-3",
+  "base_models": [
+    "xgboost",
+    "lstm"
+  ],
+  "cv_rmse": 0.020789449987822266,
+  "cv_rmse_std": 0.0032235801426017006,
+  "rmse_per_fold": [
+    0.019707570936212598,
+    0.02535406614954257,
+    0.01775071090126811
+  ],
+  "coefficients": {
+    "xgboost": 0.0015306299346876631,
+    "lstm": 0.46586856187585324
+  },
+  "intercept": 0.0011055810877634276,
+  "model_type": "Ridge",
+  "alpha": 0.001
+}

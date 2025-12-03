@@ -1,0 +1,22 @@
+{
+  "ticker": "MSFT",
+  "meta_model": "ridge_alpha_1e-2",
+  "base_models": [
+    "xgboost",
+    "lstm"
+  ],
+  "cv_rmse": 0.015850332182667196,
+  "cv_rmse_std": 0.004353605304063733,
+  "rmse_per_fold": [
+    0.016546595674612623,
+    0.020937743437986944,
+    0.010326064629658661
+  ],
+  "coefficients": {
+    "xgboost": -0.0007725543064267493,
+    "lstm": -0.0040492474204433145
+  },
+  "intercept": 0.0008638483979285213,
+  "model_type": "Ridge",
+  "alpha": 0.01
+}

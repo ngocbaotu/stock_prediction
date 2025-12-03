@@ -1,0 +1,22 @@
+{
+  "ticker": "TSLA",
+  "meta_model": "ridge_alpha_1e-2",
+  "base_models": [
+    "xgboost",
+    "lstm"
+  ],
+  "cv_rmse": 0.04232083887069552,
+  "cv_rmse_std": 0.00913027866923445,
+  "rmse_per_fold": [
+    0.046526183346448716,
+    0.05159760570923841,
+    0.030198187177110605
+  ],
+  "coefficients": {
+    "xgboost": 0.7565067907256106,
+    "lstm": 0.14317714608084814
+  },
+  "intercept": 0.0010263730513627857,
+  "model_type": "Ridge",
+  "alpha": 0.01
+}
