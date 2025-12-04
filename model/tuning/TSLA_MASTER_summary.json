@@ -3,34 +3,30 @@
   "models": [
     {
       "model": "xgboost",
-      "best_cv_rmse": 0.0389781025262839,
+      "best_cv_rmse": 0.03875045960694173,
       "best_params": {
         "n_estimators": 300,
-        "max_depth": 6,
+        "max_depth": 8,
         "learning_rate": 0.01,
-        "subsample": 0.7,
-        "colsample_bytree": 0.8,
-        "min_child_weight": 5,
-        "gamma": 0,
-        "reg_alpha": 0,
-        "reg_lambda": 3
+        "subsample": 0.9,
+        "colsample_bytree": 0.8
       },
       "json_path": "../model/tuning/TSLA_xgboost_tuning.json",
       "csv_path": "../model/tuning/TSLA_xgboost_best_predictions.csv"
     },
     {
       "model": "lstm",
-      "best_cv_rmse": 0.03976758196949959,
+      "best_cv_rmse": 0.039714593440294266,
       "best_params": {
         "seq_len": 1,
         "hidden_dimension": 32,
-        "layer_dimension": 1,
+        "layer_dimension": 3,
         "fc1_dimension": 32,
         "fc2_dimension": 16,
-        "dropout": 0.2,
-        "lr": 0.0005,
+        "dropout": 0,
+        "lr": 0.0001,
         "num_epochs": 20,
-        "batch_size": 64
+        "batch_size": 32
       },
       "json_path": "../model/tuning/TSLA_lstm_tuning.json",
       "csv_path": "../model/tuning/TSLA_lstm_best_predictions.csv"

@@ -3,32 +3,28 @@
   "models": [
     {
       "model": "xgboost",
-      "best_cv_rmse": 0.018842558383205636,
+      "best_cv_rmse": 0.019537736449721566,
       "best_params": {
-        "n_estimators": 500,
-        "max_depth": 6,
-        "learning_rate": 0.1,
+        "n_estimators": 300,
+        "max_depth": 4,
+        "learning_rate": 0.01,
         "subsample": 0.7,
-        "colsample_bytree": 0.7,
-        "min_child_weight": 1,
-        "gamma": 0.1,
-        "reg_alpha": 0.1,
-        "reg_lambda": 1
+        "colsample_bytree": 0.7
       },
       "json_path": "../model/tuning/GOOGL_xgboost_tuning.json",
       "csv_path": "../model/tuning/GOOGL_xgboost_best_predictions.csv"
     },
     {
       "model": "lstm",
-      "best_cv_rmse": 0.018831497058272362,
+      "best_cv_rmse": 0.018853599205613136,
       "best_params": {
         "seq_len": 1,
-        "hidden_dimension": 64,
+        "hidden_dimension": 32,
         "layer_dimension": 2,
         "fc1_dimension": 32,
         "fc2_dimension": 16,
         "dropout": 0.1,
-        "lr": 0.0005,
+        "lr": 0.001,
         "num_epochs": 20,
         "batch_size": 64
       },

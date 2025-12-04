@@ -3,32 +3,28 @@
   "models": [
     {
       "model": "xgboost",
-      "best_cv_rmse": 0.016867285135427536,
+      "best_cv_rmse": 0.016978742393702183,
       "best_params": {
         "n_estimators": 300,
-        "max_depth": 6,
-        "learning_rate": 0.05,
-        "subsample": 0.7,
-        "colsample_bytree": 0.9,
-        "min_child_weight": 5,
-        "gamma": 0.2,
-        "reg_alpha": 0.3,
-        "reg_lambda": 3
+        "max_depth": 4,
+        "learning_rate": 0.01,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8
       },
       "json_path": "../model/tuning/AAPL_xgboost_tuning.json",
       "csv_path": "../model/tuning/AAPL_xgboost_best_predictions.csv"
     },
     {
       "model": "lstm",
-      "best_cv_rmse": 0.016965020447969437,
+      "best_cv_rmse": 0.016630705446004868,
       "best_params": {
-        "seq_len": 5,
+        "seq_len": 3,
         "hidden_dimension": 64,
         "layer_dimension": 2,
         "fc1_dimension": 64,
-        "fc2_dimension": 32,
-        "dropout": 0.1,
-        "lr": 0.0005,
+        "fc2_dimension": 16,
+        "dropout": 0,
+        "lr": 0.0001,
         "num_epochs": 20,
         "batch_size": 64
       },

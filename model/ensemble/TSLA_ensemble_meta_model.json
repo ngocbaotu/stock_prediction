@@ -1,22 +1,21 @@
 {
   "ticker": "TSLA",
-  "meta_model": "ridge_alpha_1e-2",
+  "meta_model": "linear",
   "base_models": [
     "xgboost",
     "lstm"
   ],
-  "cv_rmse": 0.04232083887069552,
-  "cv_rmse_std": 0.00913027866923445,
+  "cv_rmse": 0.04114928390423328,
+  "cv_rmse_std": 0.00815040745164901,
   "rmse_per_fold": [
-    0.046526183346448716,
-    0.05159760570923841,
-    0.030198187177110605
+    0.04597708060298324,
+    0.047799766213154696,
+    0.029671004896561905
   ],
   "coefficients": {
-    "xgboost": 0.7565067907256106,
-    "lstm": 0.14317714608084814
+    "xgboost": 1.1667813999664802,
+    "lstm": -0.37593721650430084
   },
-  "intercept": 0.0010263730513627857,
-  "model_type": "Ridge",
-  "alpha": 0.01
+  "intercept": 0.001040386866364994,
+  "model_type": "LinearRegression"
 }
