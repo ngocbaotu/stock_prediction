@@ -26,6 +26,7 @@ ENV/
 .env
 .env.*
 *.env
+my_virtual_env/
 
 # Jupyter
 .ipynb*
@@ -48,6 +49,7 @@ wandb/
 data/*
 !data/processed/
 !data/features/
+!data/selected/
 
 # ========================
 # Next.js Frontend
