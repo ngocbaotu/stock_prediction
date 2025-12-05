@@ -1,41 +1,35 @@
 {
   "ticker": "GOOGL",
-  "timestamp": "20251124_235356",
   "models": [
     {
       "model": "xgboost",
-      "best_cv_rmse": 0.01873625287872982,
+      "best_cv_rmse": 0.019537736449721566,
       "best_params": {
-        "n_estimators": 1000,
+        "n_estimators": 300,
         "max_depth": 4,
         "learning_rate": 0.01,
         "subsample": 0.7,
-        "colsample_bytree": 0.7,
-        "min_child_weight": 3,
-        "gamma": 0,
-        "reg_alpha": 0,
-        "reg_lambda": 1.0,
-        "early_stopping_rounds": 50
+        "colsample_bytree": 0.7
       },
-      "json_path": "../model/tuning/GOOGL_xgboost_tuning_20251124_235356.json",
-      "csv_path": "../model/tuning/GOOGL_xgboost_best_predictions_20251124_235356.csv"
+      "json_path": "../model/tuning/GOOGL_xgboost_tuning.json",
+      "csv_path": "../model/tuning/GOOGL_xgboost_best_predictions.csv"
     },
     {
       "model": "lstm",
-      "best_cv_rmse": 0.020431961382317183,
+      "best_cv_rmse": 0.018853599205613136,
       "best_params": {
-        "seq_len": 5,
-        "hidden_dimension": 64,
+        "seq_len": 1,
+        "hidden_dimension": 32,
         "layer_dimension": 2,
-        "fc1_dimension": 128,
-        "fc2_dimension": 64,
-        "dropout": 0.2,
-        "lr": 0.01,
-        "num_epochs": 100,
+        "fc1_dimension": 32,
+        "fc2_dimension": 16,
+        "dropout": 0.1,
+        "lr": 0.001,
+        "num_epochs": 20,
         "batch_size": 64
       },
-      "json_path": "../model/tuning/GOOGL_lstm_tuning_20251124_235356.json",
-      "csv_path": "../model/tuning/GOOGL_lstm_best_predictions_20251124_235356.csv"
+      "json_path": "../model/tuning/GOOGL_lstm_tuning.json",
+      "csv_path": "../model/tuning/GOOGL_lstm_best_predictions.csv"
     }
   ]
 }

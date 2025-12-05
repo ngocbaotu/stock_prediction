@@ -4,6 +4,10 @@
 
 **Description**: Given the stock dataset with daily OHLCV (Open, High, Low, Close, and Volume) values, we will use a machine learning pipeline to predict multiple stocks’ next-day logarithmic returns, defined as $y_{t+1} = \dfrac{log(close_{t+1})} {close_{t}}$, for the upcoming year.
 
+## Project Workflow
+
+to be filled
+
 ## Acknowledgement
 
 This project uses:
@@ -16,7 +20,4 @@ This project uses:
 2. `/backend`: where the machine learning pipeline and backend server live
 3. `/frontend`: where the user interface lives
 4. `/data`: where the processed and feature datasets live
-
-## Project Workflow
-
-to be filled
+5. `/model`: where meta-information about fine-tuned and ensembled models lives

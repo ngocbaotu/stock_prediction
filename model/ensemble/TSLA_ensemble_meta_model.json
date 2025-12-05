@@ -1,0 +1,21 @@
+{
+  "ticker": "TSLA",
+  "meta_model": "linear",
+  "base_models": [
+    "xgboost",
+    "lstm"
+  ],
+  "cv_rmse": 0.04114928390423328,
+  "cv_rmse_std": 0.00815040745164901,
+  "rmse_per_fold": [
+    0.04597708060298324,
+    0.047799766213154696,
+    0.029671004896561905
+  ],
+  "coefficients": {
+    "xgboost": 1.1667813999664802,
+    "lstm": -0.37593721650430084
+  },
+  "intercept": 0.001040386866364994,
+  "model_type": "LinearRegression"
+}
