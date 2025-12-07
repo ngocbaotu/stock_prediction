@@ -38,8 +38,6 @@ xgb_best_params = tuning_data['models'][0]['best_params']
 lstm_best_params = tuning_data['models'][1]['best_params']
 best_alpha = ensemble_data.get('alpha', None)
 
-lstm_best_params
-
 #BUILD FUTURE DATA
 #Consider data from 2024-04-03 to 2025-09-26 as the future
 
@@ -82,8 +80,7 @@ def build_past_future_sets(ticker='AAPL'):
     return X_train, X_test, y_train, y_test, dates_train, dates_test
 
 # Example usage
-_, _, _, _, _, dates_test = build_past_future_sets(ticker=TICKER)
-dates_test
+#_, _, _, _, _, dates_test = build_past_future_sets(ticker=TICKER)
 
 #XGBoost Inference
 '''
