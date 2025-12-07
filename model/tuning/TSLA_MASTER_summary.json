@@ -3,7 +3,7 @@
   "models": [
     {
       "model": "xgboost",
-      "best_cv_rmse": 0.03875045960694173,
+      "best_cv_rmse": 0.03879139633406985,
       "best_params": {
         "n_estimators": 300,
         "max_depth": 8,
@@ -11,12 +11,12 @@
         "subsample": 0.9,
         "colsample_bytree": 0.8
       },
-      "json_path": "../model/tuning/TSLA_xgboost_tuning.json",
-      "csv_path": "../model/tuning/TSLA_xgboost_best_predictions.csv"
+      "json_path": "/home/nathanaelgarcia/code/Fall25/CS4210/Stock-Treadliner/model/tuning/TSLA_xgboost_tuning.json",
+      "csv_path": "/home/nathanaelgarcia/code/Fall25/CS4210/Stock-Treadliner/model/tuning/TSLA_xgboost_best_predictions.csv"
     },
     {
       "model": "lstm",
-      "best_cv_rmse": 0.039714593440294266,
+      "best_cv_rmse": 0.039727029576897624,
       "best_params": {
         "seq_len": 1,
         "hidden_dimension": 32,
@@ -28,8 +28,8 @@
         "num_epochs": 20,
         "batch_size": 32
       },
-      "json_path": "../model/tuning/TSLA_lstm_tuning.json",
-      "csv_path": "../model/tuning/TSLA_lstm_best_predictions.csv"
+      "json_path": "/home/nathanaelgarcia/code/Fall25/CS4210/Stock-Treadliner/model/tuning/TSLA_lstm_tuning.json",
+      "csv_path": "/home/nathanaelgarcia/code/Fall25/CS4210/Stock-Treadliner/model/tuning/TSLA_lstm_best_predictions.csv"
     }
   ]
 }
