@@ -8,6 +8,7 @@ import torch.nn as nn
 import gc
 import json
 import random
+from pathlib import Path
 from sklearn.linear_model import LinearRegression, Ridge
 
 # Run this once (only once) everytime you opened jupyter notebook
@@ -22,11 +23,16 @@ torch.manual_seed(SEED)
 
 # Load parameters for a *specific* stock
 # Pick different TICKER to show different inference results
-TICKER = "AAPL"
-with open(f'../model/tuning/{TICKER}_MASTER_summary.json', 'r') as file:
-    tuning_data = json.load(file)
-with open(f'../model/ensemble/{TICKER}_ensemble_meta_model.json', 'r') as file:
-    ensemble_data = json.load(file)
+TICKER = "AMZN"
+base_dir = Path(__file__).resolve().parent.parent
+#with open(f'../model/tuning/{TICKER}_MASTER_summary.json', 'r') as file:
+file_dir = base_dir / "model" / "tuning" / f"{TICKER}_MASTER_summary.json" 
+file = open(file_dir, 'r')
+tuning_data = json.load(file)
+#with open(f'../model/ensemble/{TICKER}_ensemble_meta_model.json', 'r') as file:
+file_dir = base_dir / "model" / "ensemble" / f"{TICKER}_ensemble_meta_model.json" 
+file = open(file_dir, 'r')
+ensemble_data = json.load(file)
 
 xgb_best_params = tuning_data['models'][0]['best_params']
 lstm_best_params = tuning_data['models'][1]['best_params']
@@ -59,8 +65,9 @@ Returns:
 """
 def build_past_future_sets(ticker='AAPL'):
     # Load dataset from a specific TICKER
-    X_raw = pd.read_csv(f"../data/selected/{ticker}_X.csv")
-    y_raw = pd.read_csv(f"../data/selected/{ticker}_y.csv")
+    base_dir = Path(__file__).resolve().parent.parent
+    X_raw = pd.read_csv(base_dir / "data" / "selected" / f"{TICKER}_X.csv")
+    y_raw = pd.read_csv(base_dir / "data" / "selected" / f"{TICKER}_y.csv")
     dates = pd.to_datetime(X_raw["date"])
     # Cut off dates
     cutoff = pd.Timestamp("2024-04-03")
