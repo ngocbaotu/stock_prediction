@@ -21,3 +21,4 @@ This project uses:
 3. `/frontend`: where the user interface lives
 4. `/data`: where the processed and feature datasets live
 5. `/model`: where meta-information about fine-tuned and ensembled models lives
+6. `/graph`: where evaluation plots for each model live

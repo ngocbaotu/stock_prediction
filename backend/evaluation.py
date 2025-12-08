@@ -171,6 +171,10 @@ for stock in STOCKS:
     compare_dir = os.path.join(temp_dir, "RMSE_performance_comparison.png")
     compareModelGraphs("RMSE", xgb_rmse, lstm_rmse, ens_rmse, compare_dir)
 
+    #IC Metric
+    compare_dir = os.path.join(temp_dir, "IC_performance_comparison.png")
+    compareModelGraphs("Information Coefficient", xgb_ic, lstm_ic, ens_ic, compare_dir)
+
     #F1 Metric
     compare_dir = os.path.join(temp_dir, "F1_performance_comparison.png")
     compareModelGraphs("F1", xgb_f1, lstm_f1, ens_f1, compare_dir)
