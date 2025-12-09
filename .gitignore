@@ -12,6 +12,7 @@ __pycache__/
 # Distribution / packaging
 *.egg-info/
 .eggs/
+.gradio/
 
 # Logs and databases
 *.log
