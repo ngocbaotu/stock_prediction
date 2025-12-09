@@ -49,6 +49,9 @@ def get_ticker_plots(ticker):
 
     # List of expected file names
     plot_files = {
+        "XGB_inference" : "XGB_inference.png",
+        "LSTM_inference" : "LSTM_inference.png",
+        "Ensemble_inference" : "Ensemble_inference.png",
         "ensemble_residual": "Ensemble_residual_graph.png",
         "f1_performance": "F1_performance_comparison.png",
         "hit_rate_performance": "Hit_Rate_performance_comparison.png",
@@ -81,6 +84,9 @@ def display_ticker_results(ticker):
 
     if error:
         return [
+            None,  # Prediction plot 1
+            None,  # Prediction plot 2
+            None,  # Prediction plot 3
             None,  # Residual plot 1
             None,  # Residual plot 2
             None,  # Residual plot 3
@@ -93,13 +99,16 @@ def display_ticker_results(ticker):
 
     # Return image paths organized by category
     return [
-        plots.get("xgb_residual", None),  # Tab 1: Residual plots - XGBoost
-        plots.get("lstm_residual", None),  # Tab 1: Residual plots - LSTM
-        plots.get("ensemble_residual", None),  # Tab 1: Residual plots - Ensemble
-        plots.get("rmse_performance", None),  # Tab 2: Metrics plots - RMSE
-        plots.get("ic_performance", None),  # Tab 2: Metrics plots - IC
-        plots.get("f1_performance", None),  # Tab 2: Metrics plots - F1
-        plots.get("hit_rate_performance", None),  # Tab 2: Metrics plots - Hit Rate
+        plots.get("XGB_inference", None),  # Tab 1: Prediction plots - XGBoost
+        plots.get("LSTM_inference", None),  # Tab 1: Prediction plots - LSTM
+        plots.get("Ensemble_inference", None),  # Tab 1: Prediction plots - Ensemble
+        plots.get("xgb_residual", None),  # Tab 2: Residual plots - XGBoost
+        plots.get("lstm_residual", None),  # Tab 2: Residual plots - LSTM
+        plots.get("ensemble_residual", None),  # Tab 2: Residual plots - Ensemble
+        plots.get("rmse_performance", None),  # Tab 3: Metrics plots - RMSE
+        plots.get("ic_performance", None),  # Tab 3: Metrics plots - IC
+        plots.get("f1_performance", None),  # Tab 3: Metrics plots - F1
+        plots.get("hit_rate_performance", None),  # Tab 3: Metrics plots - Hit Rate
         f"✅ Successfully loaded {len(plots)} plots for {ticker}"  # Status message
     ]
 
@@ -207,12 +216,17 @@ with demo:
             plot_info = gr.Markdown("""
             **Plot Categories:**
 
-            **📉 Residual Plots** (Tab 1):
+            **🗠 Prediction Plots** (Tab 1):
+            1. **XGB Prediction Graph**: XGBoost model predictions
+            2. **LSTM Prediction Graph**: LSTM model predictions
+            3. **Ensemble Prediction Graph**: Ensemble model predictions
+
+            **📉 Residual Plots** (Tab 2):
             1. **XGB Residual Graph**: XGBoost model residuals
             2. **LSTM Residual Graph**: LSTM model residuals  
             3. **Ensemble Residual Graph**: Ensemble model residuals
 
-            **📈 Performance Metrics** (Tab 2):
+            **📈 Performance Metrics** (Tab 3):
             1. **RMSE Performance**: Root Mean Square Error comparison
             2. **IC Performance**: Information Coefficient comparison
             3. **F1 Performance**: F1-score comparison
@@ -224,7 +238,35 @@ with demo:
 
             # Split content into tabs for better readability
             with gr.Tabs():
-                # First tab lists model plots
+                # First tab with model predictions
+                with gr.TabItem("🗠 Prediction Plots"):
+                    gr.Markdown("### Model Prediction Analysis")
+                    gr.Markdown("Visualizing model prediction values compared to actual values")
+
+                    with gr.Row():
+                        with gr.Column():
+                            gr.Markdown("**XGBoost Predictions**")
+                            xgb_predictions = gr.Image(label="", type="filepath", height=300)
+                        with gr.Column():
+                            gr.Markdown("**LSTM Predictions**")
+                            lstm_predictions = gr.Image(label="", type="filepath", height=300)
+
+                    with gr.Row():
+                        with gr.Column(scale=2):
+                            gr.Markdown("**Ensemble Predictions**")
+                            ensemble_predictions = gr.Image(label="", type="filepath", height=300)
+                        with gr.Column(scale=1):
+                            gr.Markdown("""
+                            
+                            
+                            ***Predictions***
+                            - The prediction plots represent the predicted values compared to their respective values
+                            - Generally, the prediction values align with the actual values
+                            - In each different plot, only the 
+                            """)
+
+
+                # Second tab lists model plots
                 with gr.TabItem("📉 Residual Plots"):
                     gr.Markdown("### Model Residual Analysis")
                     gr.Markdown("Visualizing prediction errors across different models")
@@ -249,7 +291,7 @@ with demo:
                             - Patterns in residuals indicate model bias
                             """)
 
-                # Second tab lists Performance Metrics
+                # Third tab lists Performance Metrics
                 with gr.TabItem("📈 Performance Metrics"):
                     gr.Markdown("### Model Performance Comparison")
                     gr.Markdown("Comparing different evaluation metrics across models")
@@ -288,13 +330,16 @@ with demo:
         inputs=[ticker_input],
         outputs=[
             data_status,
-            xgb_plot,  # Tab 1: Residual plots
-            lstm_plot,  # Tab 1: Residual plots
-            ensemble_plot,  # Tab 1: Residual plots
-            rmse_plot,  # Tab 2: Metrics plots
-            ic_plot,  # Tab 2: Metrics plots
-            f1_plot,  # Tab 2: Metrics plots
-            hit_rate_plot,  # Tab 2: Metrics plots
+            xgb_predictions,  # Tab 1: Prediction plots
+            lstm_predictions,  # Tab 1: Prediction plots
+            ensemble_predictions,  # Tab 1: Prediction plots
+            xgb_plot,  # Tab 2: Residual plots
+            lstm_plot,  # Tab 2: Residual plots
+            ensemble_plot,  # Tab 2: Residual plots
+            rmse_plot,  # Tab 3: Metrics plots
+            ic_plot,  # Tab 3: Metrics plots
+            f1_plot,  # Tab 3: Metrics plots
+            hit_rate_plot,  # Tab 3: Metrics plots
             plot_status  # Status message
         ]
     )
