@@ -163,7 +163,7 @@ demo = gr.Blocks(title="Stock Prediction Models Dashboard")
 with demo:
     gr.Markdown("# 📈 Stock Treadliner")
     gr.Markdown("CS 4210 Machine Learning : Semester Project")
-    gr.Markdown("*Insert Group Info Here*")
+    gr.Markdown("*Jasper Liu, Ngoc Vo, Ngoc Tu, Thuy Linh Pham, Nathanael Garcia, Nicholas Magtangob*")
 
     # Get available tickers
     available_tickers = get_available_tickers()
