@@ -1,0 +1,35 @@
+{
+  "ticker": "GOOGL",
+  "models": [
+    {
+      "model": "xgboost",
+      "best_cv_rmse": 0.019612228445854647,
+      "best_params": {
+        "n_estimators": 300,
+        "max_depth": 4,
+        "learning_rate": 0.01,
+        "subsample": 0.7,
+        "colsample_bytree": 0.7
+      },
+      "json_path": "/home/nathanaelgarcia/code/Fall25/CS4210/Stock-Treadliner/model/tuning/GOOGL_xgboost_tuning.json",
+      "csv_path": "/home/nathanaelgarcia/code/Fall25/CS4210/Stock-Treadliner/model/tuning/GOOGL_xgboost_best_predictions.csv"
+    },
+    {
+      "model": "lstm",
+      "best_cv_rmse": 0.018850450590252876,
+      "best_params": {
+        "seq_len": 1,
+        "hidden_dimension": 32,
+        "layer_dimension": 3,
+        "fc1_dimension": 64,
+        "fc2_dimension": 32,
+        "dropout": 0.1,
+        "lr": 0.001,
+        "num_epochs": 20,
+        "batch_size": 64
+      },
+      "json_path": "/home/nathanaelgarcia/code/Fall25/CS4210/Stock-Treadliner/model/tuning/GOOGL_lstm_tuning.json",
+      "csv_path": "/home/nathanaelgarcia/code/Fall25/CS4210/Stock-Treadliner/model/tuning/GOOGL_lstm_best_predictions.csv"
+    }
+  ]
+}

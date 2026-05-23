@@ -1,0 +1,22 @@
+{
+  "ticker": "AMZN",
+  "meta_model": "ridge_alpha_1e-4",
+  "base_models": [
+    "xgboost",
+    "lstm"
+  ],
+  "cv_rmse": 0.021584915088614792,
+  "cv_rmse_std": 0.0049864871155906815,
+  "rmse_per_fold": [
+    0.01728883103671273,
+    0.028577128555888606,
+    0.018892745120974337
+  ],
+  "coefficients": {
+    "xgboost": -0.1529450654203671,
+    "lstm": 0.7323881226789523
+  },
+  "intercept": 0.0006341854409251483,
+  "model_type": "Ridge",
+  "alpha": 0.0001
+}

@@ -1,0 +1,35 @@
+{
+  "ticker": "AMZN",
+  "models": [
+    {
+      "model": "xgboost",
+      "best_cv_rmse": 0.019960009012549396,
+      "best_params": {
+        "n_estimators": 300,
+        "max_depth": 4,
+        "learning_rate": 0.01,
+        "subsample": 0.9,
+        "colsample_bytree": 0.9
+      },
+      "json_path": "/home/nathanaelgarcia/code/Fall25/CS4210/Stock-Treadliner/model/tuning/AMZN_xgboost_tuning.json",
+      "csv_path": "/home/nathanaelgarcia/code/Fall25/CS4210/Stock-Treadliner/model/tuning/AMZN_xgboost_best_predictions.csv"
+    },
+    {
+      "model": "lstm",
+      "best_cv_rmse": 0.019217091239988805,
+      "best_params": {
+        "seq_len": 5,
+        "hidden_dimension": 64,
+        "layer_dimension": 2,
+        "fc1_dimension": 32,
+        "fc2_dimension": 32,
+        "dropout": 0,
+        "lr": 0.0001,
+        "num_epochs": 20,
+        "batch_size": 32
+      },
+      "json_path": "/home/nathanaelgarcia/code/Fall25/CS4210/Stock-Treadliner/model/tuning/AMZN_lstm_tuning.json",
+      "csv_path": "/home/nathanaelgarcia/code/Fall25/CS4210/Stock-Treadliner/model/tuning/AMZN_lstm_best_predictions.csv"
+    }
+  ]
+}
